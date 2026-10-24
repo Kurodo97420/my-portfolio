@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top-navigation">
+  <a href="index.html" class="home-link">← Retour à l'accueil</a>
+  <nav class="navigation-links">
+    <a href="about.html">About me</a>
+    <a href="competences.html">Compétences et Expérience</a>
+    <a href="cv.html">Mon CV</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<section class="content-section">
+  <h1>Contact</h1>
+  <p>Une question, une opportunité, envie d'échanger ? Remplissez le formulaire ci-dessous.</p>
+  <form class="contact-form">
+    <label for="name">Nom et Prénom</label>
+    <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
+
+    <label for="email">Adresse mail</label>
+    <input type="email" id="email" name="email" placeholder="vous@email.com" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" placeholder="Écrivez votre message..." required></textarea>
+
+    <button type="submit" class="button-link">Envoyer</button>
+  </form>
+</section>
+
+</body>
+</html>
