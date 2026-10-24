@@ -3,37 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Contact — Portfolio</title>
-<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#0d0f12">
+<title>Contact — Claude Vidot | Portfolio</title>
+<meta name="description" content="Contactez Claude Vidot grâce au formulaire : indiquez votre nom, votre adresse mail et votre message.">
+<meta name="author" content="Claude Vidot">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="top-navigation">
   <a href="index.html" class="home-link">← Retour à l'accueil</a>
-  <nav class="navigation-links">
+  <nav class="navigation-links" aria-label="Navigation principale">
     <a href="about.html">About me</a>
     <a href="competences.html">Compétences et Expérience</a>
     <a href="cv.html">Mon CV</a>
-    <a href="contact.html" class="active">Contact</a>
+    <a href="contact.html" class="active" aria-current="page">Contact</a>
   </nav>
 </header>
 
-<section class="content-section">
-  <h1>Contact</h1>
-  <p>Une question, une opportunité, envie d'échanger ? Remplissez le formulaire ci-dessous.</p>
-  <form class="contact-form">
-    <label for="name">Nom et Prénom</label>
-    <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
+<main>
+  <section class="content-section">
+    <h1>Contact</h1>
+    <p>Une question, une opportunité, envie d'échanger ? Remplissez le formulaire ci-dessous.</p>
+    <form class="contact-form">
+      <label for="name">Nom et Prénom</label>
+      <input type="text" id="name" name="name" placeholder="Votre nom et prénom" autocomplete="name" required>
 
-    <label for="email">Adresse mail</label>
-    <input type="email" id="email" name="email" placeholder="vous@email.com" required>
+      <label for="email">Adresse mail</label>
+      <input type="email" id="email" name="email" placeholder="vous@email.com" autocomplete="email" required>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="6" placeholder="Écrivez votre message..." required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="Écrivez votre message..." required></textarea>
 
-    <button type="submit" class="button-link">Envoyer</button>
-  </form>
-</section>
+      <button type="submit" class="button-link">Envoyer</button>
+    </form>
+  </section>
+</main>
 
 </body>
 </html>
