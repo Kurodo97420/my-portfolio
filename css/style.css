@@ -338,6 +338,74 @@ textarea:focus-visible {
 
 
 /* ============================================
+   PHOTOS
+   ============================================ */
+
+/* ta photo de profil (page About me) : un cercle avec un contour violet */
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;  /* 50% = forme ronde */
+  object-fit: cover;   /* l'image remplit le cercle sans être déformée */
+  border: 2px solid #8062ff;
+}
+
+/* le début de la page About me : la photo de profil à gauche, le texte à droite */
+.about-intro {
+  display: flex;
+  flex-wrap: wrap;     /* si l'écran est trop étroit, le texte passe sous la photo */
+  align-items: center; /* la photo est centrée verticalement par rapport au texte */
+  gap: 24px;
+}
+
+.about-intro .profile-photo {
+  flex-shrink: 0;      /* la photo garde sa taille, elle ne s'écrase pas */
+}
+
+.about-intro-text {
+  flex: 1 1 280px;     /* le texte prend toute la place restante (280px minimum) */
+}
+
+/* un bloc "photo + légende" (la balise <figure>) */
+.photo-figure {
+  margin-bottom: 16px;
+}
+
+.photo-figure img {
+  display: block;
+  width: 100%;         /* la photo prend toute la largeur disponible... */
+  height: auto;        /* ...et sa hauteur s'adapte pour ne pas la déformer */
+  border-radius: 12px;
+  border: 1px solid #23262c;
+}
+
+/* la légende sous la photo */
+.photo-figure figcaption {
+  color: #9a9ea6;
+  font-size: .85rem;
+  margin-top: 8px;
+}
+
+/* une rangée de photos côte à côte (elles passent l'une sous l'autre si l'écran est trop étroit) */
+.photo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.photo-row .photo-figure {
+  flex: 1 1 280px;     /* chaque photo fait au moins 280px de large, puis se partage la place */
+}
+
+/* photo en format portrait (plus haute que large) : on limite sa largeur pour qu'elle ne soit pas gigantesque */
+.tall-photo {
+  max-width: 320px;
+  margin-top: 16px;
+}
+
+
+/* ============================================
    VERSION RESPONSIVE
    Par défaut le style est pensé pour un écran de PC.
    Les media queries ci-dessous adaptent le menu pour
@@ -389,6 +457,10 @@ textarea:focus-visible {
   }
   .home-content h1 {
     font-size: 1.8rem;
+  }
+  .profile-photo {
+    width: 130px;      /* photo de profil un peu plus petite sur smartphone */
+    height: 130px;
   }
   .home-menu {
     gap: 8px;
