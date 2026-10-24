@@ -1,0 +1,504 @@
+
+* {
+  box-sizing: border-box; /* le padding et la bordure sont comptés dans la largeur/hauteur */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0d0f12;
+  color: #e8e8ea;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* toutes les <section> sont centrées avec une largeur maximale */
+section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+/* ACCESSIBILITÉ AU CLAVIER
+   Quand on navigue avec la touche Tab, l'élément sélectionné (lien, bouton,
+   champ) reçoit un contour violet bien visible pour savoir où l'on est. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #8062ff;
+  outline-offset: 3px;
+}
+
+
+/* ============================================
+   PAGE D'ACCUEIL (.home-section)
+   ============================================ */
+
+.home-section {
+  min-height: 100vh;
+  /* 100dvh = la hauteur réellement visible sur mobile (sans la barre d'adresse).
+     Avec 100vh seul, LinkedIn / GitHub pouvaient être cachés en bas de l'écran.
+     Les anciens navigateurs qui ne connaissent pas dvh gardent la ligne du dessus. */
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+/* le bloc avec le nom + les 4 liens, centré au milieu de l'écran */
+.home-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 36px;
+}
+
+/* le nom et le slogan, regroupés l'un sous l'autre avec un petit espace entre les deux */
+.home-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+/* le slogan sous le nom : en gris clair, plus petit que le nom */
+.slogan {
+  color: #9a9ea6;
+  font-size: 1.15rem;
+}
+
+/* la liste des 4 liens (À propos, Compétences...) */
+.home-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.home-menu a {
+  color: #e8e8ea;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: 1px solid #23262c;
+  border-radius: 8px;
+}
+
+.home-menu a:hover {
+  border-color: #8062ff;
+  color: #8062ff;
+}
+
+/* les liens LinkedIn / GitHub tout en bas de la page */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* LinkedIn et GitHub : texte clair avec un contour violet pour bien les remarquer */
+.social-links a {
+  color: #e8e8ea;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 20px;
+  border: 1px solid #8062ff;
+  border-radius: 8px;
+}
+
+/* au survol : le fond devient violet (même violet que le bouton "Envoyer") */
+.social-links a:hover {
+  background: #7656ff;
+  border-color: #7656ff;
+  color: #ffffff;
+}
+
+
+/* ============================================
+   BARRE DE NAVIGATION EN HAUT DES AUTRES PAGES
+   (À propos, Compétences, CV, Contact)
+   ============================================ */
+
+.top-navigation {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #23262c;
+  background: #0d0f12;
+}
+
+/* le lien "Retour à l'accueil" */
+.top-navigation .home-link {
+  color: #8062ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+.top-navigation .home-link:hover {
+  text-decoration: underline;
+}
+
+/* le groupe des 4 liens de navigation */
+.top-navigation .navigation-links {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.top-navigation .navigation-links a {
+  color: #e8e8ea;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: 1px solid #23262c;
+  border-radius: 8px;
+}
+
+.top-navigation .navigation-links a:hover {
+  border-color: #8062ff;
+  color: #8062ff;
+}
+
+/* classe ajoutée sur le lien de la page actuellement affichée */
+.top-navigation .navigation-links a.active {
+  border-color: #8062ff;
+  color: #8062ff;
+}
+
+
+/* ============================================
+   CONTENU DES PAGES (À propos, Compétences, CV, Contact)
+   ============================================ */
+
+.content-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+/* classe ajoutée en plus de .content-section sur la page Compétences,
+   pour lui donner une largeur maximale plus grande */
+.wide-content-section {
+  max-width: 820px;
+}
+
+.content-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+}
+
+/* titres de section (ex : "Domaines de compétences") */
+.content-section h2 {
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #8062ff;
+}
+
+/* sous-titres (ex : "Systèmes & Réseaux") */
+.content-section h3 {
+  font-size: 1.05rem;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.content-section p {
+  color: #9a9ea6;
+  margin-bottom: 16px;
+}
+
+/* bouton violet plein, utilisé par exemple pour "Télécharger le CV" */
+.content-section .button-link {
+  display: inline-block;
+  margin-top: 12px;
+  background: #7656ff; /* violet un peu plus foncé pour que le texte blanc soit bien lisible */
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.content-section .button-link:hover {
+  opacity: .85;
+}
+
+
+/* ============================================
+   PAGE COMPÉTENCES : badges et expériences
+   ============================================ */
+
+/* la rangée de badges de compétences (ex : "HTML", "CSS"...) */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.skill-badge {
+  background: #15181d;
+  border: 1px solid #23262c;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+/* un bloc représentant une expérience professionnelle */
+.experience-block {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #23262c;
+}
+
+/* pas de ligne de séparation sous le tout dernier bloc d'expérience */
+.experience-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.experience-block h3 {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+/* la ligne violette avec l'entreprise et les dates */
+.experience-block .job-date {
+  display: block;
+  color: #8062ff;
+  font-weight: 600;
+  font-size: .9rem;
+  margin-bottom: 10px;
+}
+
+.experience-block ul {
+  padding-left: 20px;
+  color: #9a9ea6;
+}
+
+.experience-block li {
+  margin-bottom: 6px;
+}
+
+
+/* ============================================
+   PAGE CONTACT : formulaire
+   ============================================ */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  font-size: .9rem;
+  margin-top: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #15181d;
+  border: 1px solid #5b6170; /* bordure plus claire pour bien voir où écrire */
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #e8e8ea;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+/* le texte d'exemple grisé dans les champs (placeholder) devient plus lisible */
+.contact-form ::placeholder {
+  color: #9a9ea6;
+}
+
+/* quand on clique dans un champ, sa bordure devient violette */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #8062ff;
+}
+
+.contact-form .button-link {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+  font-family: inherit; /* un <button> n'utilise pas la police du site par défaut : on la lui donne */
+  font-size: 1rem;
+}
+
+
+/* ============================================
+   PHOTOS
+   ============================================ */
+
+/* ta photo de profil (page À propos) : un cercle avec un contour violet */
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;  /* 50% = forme ronde */
+  object-fit: cover;   /* l'image remplit le cercle sans être déformée */
+  border: 2px solid #8062ff;
+}
+
+/* le début de la page À propos : la photo de profil à gauche, le texte à droite */
+.about-intro {
+  display: flex;
+  flex-wrap: wrap;     /* si l'écran est trop étroit, le texte passe sous la photo */
+  align-items: center; /* la photo est centrée verticalement par rapport au texte */
+  gap: 24px;
+}
+
+.about-intro .profile-photo {
+  flex-shrink: 0;      /* la photo garde sa taille, elle ne s'écrase pas */
+}
+
+.about-intro-text {
+  flex: 1 1 280px;     /* le texte prend toute la place restante (280px minimum) */
+}
+
+/* un bloc "photo + légende" (la balise <figure>) */
+.photo-figure {
+  margin-bottom: 16px;
+}
+
+.photo-figure img {
+  display: block;
+  width: 100%;         /* la photo prend toute la largeur disponible... */
+  height: auto;        /* ...et sa hauteur s'adapte pour ne pas la déformer */
+  border-radius: 12px;
+  border: 1px solid #23262c;
+}
+
+/* la légende sous la photo */
+.photo-figure figcaption {
+  color: #9a9ea6;
+  font-size: .85rem;
+  margin-top: 8px;
+}
+
+/* une rangée de photos côte à côte (elles passent l'une sous l'autre si l'écran est trop étroit) */
+.photo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.photo-row .photo-figure {
+  flex: 1 1 280px;     /* chaque photo fait au moins 280px de large, puis se partage la place */
+}
+
+/* photo en format portrait (plus haute que large) : on limite sa largeur pour qu'elle ne soit pas gigantesque */
+.tall-photo {
+  max-width: 320px;
+  margin-top: 16px;
+}
+
+
+/* ============================================
+   VERSION RESPONSIVE
+   Par défaut le style est pensé pour un écran de PC.
+   Les media queries ci-dessous adaptent le menu pour
+   qu'il prenne moins de place sur tablette et smartphone.
+   ============================================ */
+
+/* TABLETTE : écrans de 900px de large ou moins */
+@media (max-width: 900px) {
+  .top-navigation {
+    padding: 16px 20px;
+    gap: 12px;
+  }
+  .top-navigation .navigation-links {
+    gap: 10px;
+  }
+  .top-navigation .navigation-links a {
+    padding: 8px 16px;
+    font-size: .9rem;
+  }
+  .home-menu {
+    gap: 10px;
+  }
+  .home-menu a {
+    padding: 8px 16px;
+    font-size: .9rem;
+  }
+}
+
+/* SMARTPHONE : écrans de 600px de large ou moins */
+@media (max-width: 600px) {
+  section {
+    padding: 60px 20px;
+  }
+  .top-navigation {
+    position: static; /* sur smartphone la barre ne reste plus collée en haut : elle prenait trop de place à l'écran */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 16px;
+    gap: 10px;
+  }
+  .top-navigation .navigation-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  .top-navigation .navigation-links a {
+    padding: 6px 12px;
+    font-size: .85rem;
+  }
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
+  .slogan {
+    font-size: 1rem;   /* slogan un peu plus petit sur smartphone */
+  }
+  .profile-photo {
+    width: 130px;      /* photo de profil un peu plus petite sur smartphone */
+    height: 130px;
+  }
+  .home-menu {
+    gap: 8px;
+  }
+  .home-menu a {
+    padding: 8px 14px;
+    font-size: .85rem;
+  }
+}
+
+/* ÉCRAN PEU HAUT (téléphone tenu en paysage) : écrans de 500px de hauteur ou moins.
+   La barre du haut ne reste pas collée, sinon elle cacherait une grande partie du contenu. */
+@media (max-height: 500px) {
+  .top-navigation {
+    position: static;
+  }
+}
