@@ -27,6 +27,7 @@ my-portfolio/
 ├── contact.html
 ├── css/
 │   └── style.css       feuille de style commune à toutes les pages
+├── images/             photos du site (portrait, ordinateur démonté, escalade)
 ├── documents/
 │   └── CV_VIDOT_CLAUDE_V9.pdf
 └── README.md
