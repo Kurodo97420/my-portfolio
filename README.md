@@ -9,7 +9,7 @@ Site portfolio personnel réalisé uniquement en **HTML et CSS** (sans JavaScrip
 | Page | Fichier | Contenu |
 |---|---|---|
 | Accueil | `index.html` | Nom, menu vers les autres pages, liens LinkedIn et GitHub |
-| About me | `about.html` | Présentation du parcours et des objectifs |
+| À propos | `about.html` | Présentation du parcours et des objectifs |
 | Compétences et Expérience | `competences.html` | Domaines de compétences et expériences professionnelles |
 | Mon CV | `cv.html` | Téléchargement du CV au format PDF |
 | Contact | `contact.html` | Formulaire de contact (en cours de développement) |

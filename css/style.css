@@ -67,7 +67,7 @@ textarea:focus-visible {
   font-weight: 800;
 }
 
-/* la liste des 4 liens (About me, Compétences...) */
+/* la liste des 4 liens (À propos, Compétences...) */
 .home-menu {
   display: flex;
   flex-wrap: wrap;
@@ -111,7 +111,7 @@ textarea:focus-visible {
 
 /* ============================================
    BARRE DE NAVIGATION EN HAUT DES AUTRES PAGES
-   (About me, Compétences, CV, Contact)
+   (À propos, Compétences, CV, Contact)
    ============================================ */
 
 .top-navigation {
@@ -171,7 +171,7 @@ textarea:focus-visible {
 
 
 /* ============================================
-   CONTENU DES PAGES (About me, Compétences, CV, Contact)
+   CONTENU DES PAGES (À propos, Compétences, CV, Contact)
    ============================================ */
 
 .content-section {
@@ -341,7 +341,7 @@ textarea:focus-visible {
    PHOTOS
    ============================================ */
 
-/* ta photo de profil (page About me) : un cercle avec un contour violet */
+/* ta photo de profil (page À propos) : un cercle avec un contour violet */
 .profile-photo {
   width: 160px;
   height: 160px;
@@ -350,7 +350,7 @@ textarea:focus-visible {
   border: 2px solid #8062ff;
 }
 
-/* le début de la page About me : la photo de profil à gauche, le texte à droite */
+/* le début de la page À propos : la photo de profil à gauche, le texte à droite */
 .about-intro {
   display: flex;
   flex-wrap: wrap;     /* si l'écran est trop étroit, le texte passe sous la photo */
