@@ -111,15 +111,22 @@ textarea:focus-visible {
   gap: 20px;
 }
 
+/* LinkedIn et GitHub : texte clair avec un contour violet pour bien les remarquer */
 .social-links a {
-  color: #9a9ea6;
+  color: #e8e8ea;
   text-decoration: none;
   font-weight: 600;
-  font-size: .95rem;
+  font-size: 1rem;
+  padding: 8px 20px;
+  border: 1px solid #8062ff;
+  border-radius: 8px;
 }
 
+/* au survol : le fond devient violet (même violet que le bouton "Envoyer") */
 .social-links a:hover {
-  color: #8062ff;
+  background: #7656ff;
+  border-color: #7656ff;
+  color: #ffffff;
 }
 
 
