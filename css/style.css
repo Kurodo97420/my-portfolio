@@ -62,9 +62,23 @@ textarea:focus-visible {
   gap: 36px;
 }
 
+/* le nom et le slogan, regroupés l'un sous l'autre avec un petit espace entre les deux */
+.home-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
 .home-content h1 {
   font-size: 2.5rem;
   font-weight: 800;
+}
+
+/* le slogan sous le nom : en gris clair, plus petit que le nom */
+.slogan {
+  color: #9a9ea6;
+  font-size: 1.15rem;
 }
 
 /* la liste des 4 liens (À propos, Compétences...) */
@@ -457,6 +471,9 @@ textarea:focus-visible {
   }
   .home-content h1 {
     font-size: 1.8rem;
+  }
+  .slogan {
+    font-size: 1rem;   /* slogan un peu plus petit sur smartphone */
   }
   .profile-photo {
     width: 130px;      /* photo de profil un peu plus petite sur smartphone */
