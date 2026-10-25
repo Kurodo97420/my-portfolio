@@ -12,7 +12,7 @@ Site portfolio personnel réalisé uniquement en **HTML et CSS** (sans JavaScrip
 | À propos | `about.html` | Présentation du parcours et des objectifs |
 | Compétences et Expérience | `competences.html` | Domaines de compétences et expériences professionnelles |
 | Mon CV | `cv.html` | Téléchargement du CV au format PDF |
-| Contact | `contact.html` | Formulaire de contact (en cours de développement) |
+| Contact | `contact.html` | Liens LinkedIn et GitHub, et formulaire de contact (en cours de développement) |
 
 La navigation entre les pages se fait depuis le haut de chaque page, avec un bouton « Retour à l'accueil ».
 
@@ -40,6 +40,14 @@ my-portfolio/
 - **Responsive** : le site s'adapte aux écrans de PC, de tablette et de smartphone grâce aux media queries.
 - **Accessibilité** : contrastes de couleurs vérifiés, contour visible lors de la navigation au clavier, `aria-label` et `aria-current` sur la navigation.
 - **Référencement (SEO)** : un titre et une description uniques par page.
+
+## Ressources et crédits
+
+- **Photos** (portrait, ordinateur démonté, escalade) : prises par l'auteur, sans droits de tiers. Les métadonnées (position GPS, etc.) ont été retirées avant publication.
+- **Police** : polices système du visiteur (`system-ui`), aucun fichier de police externe.
+- **Icônes, thèmes, framework, bibliothèques** : aucun. Tout le code (HTML et CSS) a été écrit pour ce projet.
+- **Textes** : rédigés par l'auteur.
+- **CV** : `documents/CV_VIDOT_CLAUDE_V9.pdf`, document personnel de l'auteur.
 
 ## Publication
 
