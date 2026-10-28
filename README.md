@@ -29,7 +29,7 @@ my-portfolio/
 │   └── style.css       feuille de style commune à toutes les pages
 ├── images/             photos du site (portrait, ordinateur démonté, escalade)
 ├── documents/
-│   └── CV_VIDOT_CLAUDE_V9.pdf
+│   └── CV_VIDOT_CLAUDE_V11.pdf
 └── README.md
 ```
 
@@ -47,7 +47,7 @@ my-portfolio/
 - **Police** : polices système du visiteur (`system-ui`), aucun fichier de police externe.
 - **Icônes, thèmes, framework, bibliothèques** : aucun. Tout le code (HTML et CSS) a été écrit pour ce projet.
 - **Textes** : rédigés par l'auteur.
-- **CV** : `documents/CV_VIDOT_CLAUDE_V9.pdf`, document personnel de l'auteur.
+- **CV** : `documents/CV_VIDOT_CLAUDE_V11.pdf`, document personnel de l'auteur.
 
 ## Publication
 
